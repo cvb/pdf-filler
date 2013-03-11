@@ -7,9 +7,10 @@ import com.itextpdf.text._
 
 object App {
   def main(args: Array[String]) {
-    val pdfin  = "/Users/cvb/tmp/tst.pdf"
-    val pdfout = "/Users/cvb/tmp/out.pdf"
-    val ffile  = "LiberationMono-Regular.ttf"
+    val ffile  = args(0)
+    val pdfin  = args(1)
+    val pdfout = args(2)
+
     val reader = new PdfReader(pdfin)
     val out    = new FileOutputStream(pdfout)
     val stamp = new PdfStamper(reader, out, '\0')
