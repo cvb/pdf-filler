@@ -8,7 +8,8 @@ scalaVersion := "2.10.0"
 
 libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "1.13" % "test",
-  "com.itextpdf" % "itextpdf" % "5.0.6"
+  "com.itextpdf" % "itextpdf" % "5.0.6",
+  "org.json4s" %% "json4s-jackson" % "3.1.0"
 )
 
 initialCommands := "import fme.pdffiller._"
