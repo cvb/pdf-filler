@@ -18,7 +18,9 @@ object App {
       .getLines.reduceLeft(_+_))
 
     val reader = new PdfReader(pdfin)
-    val out    = new FileOutputStream(pdfout)
+    val out    =
+      if (pdfout == "-") System.out
+      else              new FileOutputStream(pdfout)
     val stamp = new PdfStamper(reader, out, '\0')
     val form = stamp.getAcroFields()
     stamp.getWriter().getAcroForm().setNeedAppearances(true)
