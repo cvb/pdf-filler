@@ -1,0 +1,8 @@
+
+* Build
+  sbt one-jar
+  it will be pretty large, still should work everywhere
+
+* Run
+  set FONT in bin/fill-pdf.sh
+  usage: cat ~/tmp/tst.j| ./bin/fill-pdf.sh ~/tmp/tst.pdf out.pdf
